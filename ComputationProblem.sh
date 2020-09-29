@@ -48,3 +48,21 @@ array[$i]=${comp[$i]}
 done
 echo "Directory values are ${comp[@]}"
 echo "Array values are ${array[@]}"
+
+echo "Sorting the array in the ascending order"
+echo "Array before sorting ${array[@]}"
+l=${#array[@]}
+max=0
+for (( i=$l; i>0; i-- ))
+do
+for (( j=1; j<i; j++ ))
+do
+if [ ${array[$i]} -lt ${array[$j]} ]
+then
+min=${array[$i]}
+array[$i]=${array[$j]}
+array[$j]=$min
+fi
+done
+done
+echo "Array after sorting in ascending order ${array[@]}"
