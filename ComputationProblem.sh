@@ -26,3 +26,15 @@ echo "Computing a % b + c"
 echo "  a=$a b=$b c=$c"
 s=$(( $a % $b + $c ))
 echo "  $a % $b + $c = $s "
+
+t=$(( $c + $(( $a / $b )) ))
+
+echo "Storing the result in the directory for every computation above"
+declare -A comp
+echo "1 - a+b*c, 2 - a*b+c, 3 - c+a/b and 4 - a%b+c"
+comp[1]=$p
+comp[2]=$q
+comp[3]=$t
+comp[4]=$s
+echo "The key's are     ${!comp[@]}"
+echo "value for key's ${comp[@]}"
