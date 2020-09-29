@@ -21,3 +21,8 @@ echo "Computing c + a / b"
 echo "  a=$a b=$b c=$c"
 r=`echo "scale=2; $c + $a / $b" | bc -l`
 echo "   $c + $a / $b = $r  "
+
+echo "Computing a % b + c"
+echo "  a=$a b=$b c=$c"
+s=$(( $a % $b + $c ))
+echo "  $a % $b + $c = $s "
