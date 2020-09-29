@@ -11,3 +11,8 @@ echo "Computing a + b * c"
 echo "  a=$a b=$b c=$c"
 p=$(( $a + $b * $c ))
 echo "   $a + $b * $c = $p   "
+
+echo "Computing a * b + c"
+echo "  a=$a b=$b c=$c"
+q=$(( $a * $b + $c ))
+echo "   $a * $b + $c = $q  "
