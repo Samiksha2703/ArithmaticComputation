@@ -38,3 +38,13 @@ comp[3]=$t
 comp[4]=$s
 echo "The key's are     ${!comp[@]}"
 echo "value for key's ${comp[@]}"
+
+
+echo "Read values from directory into the array"
+array=()
+for i in `seq 4`
+do
+array[$i]=${comp[$i]}
+done
+echo "Directory values are ${comp[@]}"
+echo "Array values are ${array[@]}"
